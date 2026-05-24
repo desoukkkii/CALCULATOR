@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, #0f172a 0%, #1e1b2e 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    padding: 1.5rem;
+}
+
+.calc-app {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.calc-container {
+    background: rgba(18, 25, 45, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 48px;
+    padding: 1.5rem;
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.calc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.8rem;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #e2e8f0;
+}
+
+.brand i {
+    font-size: 1.6rem;
+    color: #f59e0b;
+}
+
+.brand span span {
+    color: #f59e0b;
+}
+
+.mode-toggles {
+    display: flex;
+    gap: 8px;
+    background: rgba(0,0,0,0.4);
+    padding: 4px;
+    border-radius: 60px;
+}
+
+.mode-btn {
+    background: transparent;
+    border: none;
+    padding: 0.4rem 1.1rem;
+    border-radius: 40px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #94a3b8;
+    transition: all 0.2s;
+    letter-spacing: 0.3px;
+}
+
+.active-mode {
+    background: #f59e0b;
+    color: #0f172a;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.display-area {
+    background: #0a0f1c;
+    border-radius: 32px;
+    padding: 1.5rem;
+    margin-bottom: 1.8rem;
+    text-align: right;
+    border: 1px solid #2d3a5e;
+    box-shadow: inset 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.expression-history {
+    color: #7e8aa8;
+    font-size: 0.85rem;
+    min-height: 28px;
+    word-break: break-word;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+.current-input {
+    color: #f1f5f9;
+    font-size: 2.6rem;
+    font-weight: 700;
+    word-break: break-word;
+    margin-top: 8px;
+    font-family: 'Inter', monospace;
+    letter-spacing: -0.5px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 1.2rem;
+}
+
+.calc-btn {
+    background: #1e293b;
+    border: none;
+    padding: 1rem 0;
+    border-radius: 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.12s linear;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calc-btn:active {
+    transform: scale(0.96);
+    background: #334155;
+}
+
+.operator-btn {
+    background: #2d3a5e;
+    color: #fbbf24;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.equal-btn {
+    background: #f59e0b;
+    color: #0f172a;
+    font-weight: 800;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 12px rgba(245,158,11,0.3);
+}
+
+.clear-btn {
+    background: #991b1b;
+    color: #fecaca;
+}
+
+.func-btn {
+    background: #2d3748;
+    color: #a5f3c3;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.mem-btn {
+    background: #1f2a3e;
+    color: #94a3b8;
+    font-size: 0.8rem;
+}
+
+.calc-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: #6c7a9e;
+    font-size: 0.7rem;
+}
+
+.mem-clear-btn {
+    background: #1e2a3a;
+    border: none;
+    padding: 0.3rem 0.9rem;
+    border-radius: 40px;
+    color: #facc15;
+    font-size: 0.7rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.1s;
+}
+
+.mem-clear-btn:hover {
+    background: #2d3a4e;
+}
+
+.hidden-btn {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .calc-container {
+        padding: 1rem;
+    }
+    .keypad {
+        gap: 8px;
+    }
+    .calc-btn {
+        padding: 0.8rem 0;
+        font-size: 0.9rem;
+    }
+    .current-input {
+        font-size: 2rem;
+    }
+    .mode-btn {
+        padding: 0.3rem 0.9rem;
+        font-size: 0.7rem;
+    }
+}

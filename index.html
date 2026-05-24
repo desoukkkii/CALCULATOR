@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>NexusCalc | Smart Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="calc-app">
+    <div class="calc-container">
+        <div class="calc-header">
+            <div class="brand">
+                <i class="fas fa-calculator"></i>
+                <span>Nexus<span>Calc</span></span>
+            </div>
+            <div class="mode-toggles">
+                <button id="standardModeBtn" class="mode-btn active-mode">Standard</button>
+                <button id="scientificModeBtn" class="mode-btn">Scientific</button>
+            </div>
+        </div>
+
+        <div class="display-area">
+            <div class="expression-history" id="expressionHistory"></div>
+            <div class="current-input" id="currentInput">0</div>
+        </div>
+
+        <div class="keypad" id="keypad">
+        </div>
+
+        <div class="calc-footer">
+            <span><i class="fas fa-history"></i> Memory available</span>
+            <button id="clearMemoryBtn" class="mem-clear-btn"><i class="fas fa-trash-alt"></i> MC</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
